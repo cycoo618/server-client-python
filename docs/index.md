@@ -74,3 +74,5 @@ with server.auth.sign_in(tableau_auth):
     print("\nThere are {} datasources on site: ".format(pagination_item.total_available))
     print([datasource.name for datasource in all_datasources])
 ```
+For more information on Server and Site ID, see:
+https://onlinehelp.tableau.com/current/pro/desktop/en-us/embed_structure.htm
