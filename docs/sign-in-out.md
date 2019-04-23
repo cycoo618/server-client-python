@@ -8,7 +8,7 @@ To sign in and out of Tableau Server, call the `Auth.sign_in` and `Auth.sign_out
 ```py
 import tableauserverclient as TSC
 
-tableau_auth = TSC.TableauAuth('USERNAME', 'PASSWORD')
+tableau_auth = TSC.TableauAuth('USERNAME', 'PASSWORD',site_id='SiteID')
 server = TSC.Server('http://SERVER_URL')
 
 server.auth.sign_in(tableau_auth)
@@ -29,7 +29,7 @@ Alternatively, for short programs, consider using a `with` block:
 ```py
 import tableauserverclient as TSC
 
-tableau_auth = TSC.TableauAuth('USERNAME', 'PASSWORD')
+tableau_auth = TSC.TableauAuth('USERNAME', 'PASSWORD',site_id='SiteID')
 server = TSC.Server('http://SERVER_URL')
 
 with server.auth.sign_in(tableau_auth):
